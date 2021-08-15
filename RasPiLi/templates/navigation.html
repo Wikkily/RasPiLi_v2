@@ -1,9 +1,43 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang = "de">
     <header>
-
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=0.5">
+        <title>RasPiLi</title>
+        <!-- Goggle fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@300&display=swap" rel="stylesheet">
+        <!-- MY CSS -->
+        <link rel="stylesheet" type="text/css" href="{% static 'css/navigation.css' %}">
+        {% block css %} {% endblock %}
     </header>
     <body>
-        TEXT
+        <div class="header">
+            <div class="inner_header">
+                <div class="logo">
+                    <h1>RasPi<span>Li</span></h1>
+                </div>
+                <ul class="navbar">
+                    <li><a href="http://" target="_blank" rel="noopener noreferrer">Home</a></li>
+                    <li><a href="http://" target="_blank" rel="noopener noreferrer">Portfolio</a></li>
+                    <li><a href="http://" target="_blank" rel="noopener noreferrer">Über mich</a></li>
+                    <li><a href="http://" target="_blank" rel="noopener noreferrer">Kontakt</a></li>
+                    <li><a href="http://" target="_blank" rel="noopener noreferrer">Login</a></li>
+                </ul>
+            </div>
+        </div>
+        {% block content %} {% endblock %}
+        <div class="footer">
+            <div class="inner_footer">
+                <ul class="foot">
+                    <li><a href="http://" target="_blank" rel="noopener noreferrer">&copy; Copyright</a></li>
+                    <li><a href="http://" target="_blank" rel="noopener noreferrer">Datenschutz</a></li>
+                    <li><a href="http://" target="_blank" rel="noopener noreferrer">Impressum</a></li>
+                </ul>
+            </div>
+        </div>
     </body>
 </html>
