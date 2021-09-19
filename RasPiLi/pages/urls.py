@@ -17,5 +17,7 @@ from django.urls import path
 from . import views
 
 urlpatterns = [
-    path('', views.navigation_view),
+    path('navigation/', views.navigation_view),
+    path('', views.index_view),
+    path('soundboard/', views.soundboard_view),
 ]

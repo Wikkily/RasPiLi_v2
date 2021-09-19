@@ -1,0 +1,130 @@
+:root {
+    --bg-color: transparent;
+    --blinkDelay: 1s;
+    --typewriterh1Character: 30;
+    --typewriterh2Character: 43;
+    --typewriterh1Speed:  calc(.2s * var(--typewriterh1Character));
+    --typewriterh2Speed:  calc(.1s * var(--typewriterh2Character));
+    /* --typewriterh1Speed: 0s;
+    --typewriterh2Speed: 0s;  */
+}
+.intro {
+    background: url("/static/img/Zahngjiajie_Huaihua_China.jpg");
+    /* background-color: var(--bg-color); */
+    background-size: cover;
+    display: grid;
+    min-height: 40vh;
+    min-width: 280px;
+    position: absolute;
+    height: 100%;
+    overflow: hidden;
+    place-content: center;
+    text-align: center;
+    width: 100%;
+    margin: auto;
+    padding-top: 70px;
+}
+.intro h1,.intro h2 {
+    font-family: "Source Sans Pro", monospace;
+    font-weight: normal;
+    margin: 20px 0;
+    position: relative;
+    width: max-content;
+    text-shadow: .08em .08em black;
+    color:white;
+    opacity: 1;
+}
+.intro h1 {font-size: clamp(1.0rem, 4vw + .4rem, 4rem);}
+.intro h2 {font-size: clamp(0.6rem, 2.5vw + .1rem, 4rem);}
+
+/* .intro h1::before, .intro h1::after,
+.intro h2::before, .intro h2::after {
+    bottom: 0;  
+    content: '';
+    left: 0;
+    position: absolute;
+    padding:0;
+    right: 0;
+    top: 0;
+}
+
+.intro h1::before {
+    animation: 
+        typewriterh1
+            var(--typewriterh1Speed) 
+            steps(calc(var(--typewriterh1Character) - 1))
+            var(--blinkDelay) 
+            forwards;
+    background: var(--bg-color);
+}
+.intro h1::after {
+    animation: 
+        typewriterh1
+            var(--typewriterh1Speed) 
+            steps(calc(var(--typewriterh1Character) - 1)) 
+            var(--blinkDelay) 
+            forwards,
+        blink 750ms steps(var(--typewriterh1Character)) infinite;
+        background: white;
+        width: .1em;
+}
+
+.intro h2::before {
+    animation: 
+        typewriterh2 
+            var(--typewriterh2Speed) 
+            steps(calc(var(--typewriterh2Character) - 1)) 
+            calc(var(--typewriterh1Speed) + var(--blinkDelay)) 
+            forwards;
+    background: var(--bg-color);
+}
+.intro h2::after {
+    animation:
+        typewriterh2
+            var(--typewriterh2Speed)
+            steps(calc(var(--typewriterh2Character) - 1))
+            calc(var(--typewriterh1Speed) + var(--blinkDelay))
+            forwards,
+        blink 750ms steps(var(--typewriterh2Character)) infinite;
+    background: white;
+    width: .1em;
+} */
+
+.subtitle {
+    animation: 
+        fadeInUp
+            2s 
+            ease 
+            .5s /* calc(var(--typewriterh1Speed) + var(--typewriterh2Speed) + var(--blinkDelay))  */
+            forwards;
+    color: hsl(0 0% 0% / 0.7);
+    font-family: "Source Sans Pro", sans-serif;
+    font-size: clamp(1rem, 1vw + 1rem, 4rem);
+    margin: 20px 0;
+    opacity: 0;
+    transform: translateY(3vw);
+    text-shadow: .08em .08em black;
+    color:white;
+}
+
+/* @keyframes typewriterh1 {
+    to {
+        left:calc(100% * (var(--typewriterh1Character) - 1) / var(--typewriterh1Character));
+    }
+}
+@keyframes typewriterh2 {
+    to {
+        left:calc(100% * (var(--typewriterh2Character) - 1) / var(--typewriterh2Character));
+    }
+}
+@keyframes blink {
+    to {
+        background: transparent;
+    }
+} */
+@keyframes fadeInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

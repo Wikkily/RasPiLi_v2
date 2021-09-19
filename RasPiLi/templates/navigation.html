@@ -1,9 +1,9 @@
 {% load static %}
 <!DOCTYPE html>
 <html lang = "de">
-    <header>
+    <head>
         <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=0.5">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>RasPiLi</title>
         <!-- Goggle fonts -->
         <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -13,24 +13,28 @@
         <!-- MY CSS -->
         <link rel="stylesheet" type="text/css" href="{% static 'css/navigation.css' %}">
         {% block css %} {% endblock %}
-    </header>
+    </head>
     <body>
         <div class="header">
-            <div class="inner_header">
-                <div class="logo">
-                    <h1>RasPi<span>Li</span></h1>
-                </div>
-                <ul class="navbar">
-                    <li><a href="http://" target="_blank" rel="noopener noreferrer">Home</a></li>
-                    <li><a href="http://" target="_blank" rel="noopener noreferrer">Portfolio</a></li>
-                    <li><a href="http://" target="_blank" rel="noopener noreferrer">Über mich</a></li>
-                    <li><a href="http://" target="_blank" rel="noopener noreferrer">Kontakt</a></li>
-                    <li><a href="http://" target="_blank" rel="noopener noreferrer">Login</a></li>
-                </ul>
+            <div class="logo">
+                <a href="/ " rel="html"><h1>RasPi<span>Li</span></h1></a>
             </div>
+            <input type="checkbox" id="nav-toggle" class="nav-toggle">
+            <label for="nav-toggle" class="nav-menu">
+                <span></span>
+            </label>
+            <ul class="nav">
+                <li><a href="http://" target="_blank" rel="noopener noreferrer">Home</a></li>
+                <li><a href="/navigation" rel="html">Portfolio</a></li>
+                <li><a href="http://" target="_blank" rel="noopener noreferrer">Blog</a></li>
+                <li><a href="/soundboard" rel="html">Soundboard</a></li>
+                <li><a href="http://" target="_blank" rel="noopener noreferrer">Kontakt</a></li>
+                <li class="login"><a href="/admin"  rel="html">Login</a></li>
+            </ul>
         </div>
-        {% block content %} {% endblock %}
-        <div class="footer">
+        {% block content %}
+        {% endblock %}
+        <!-- <div class="footer">
             <div class="inner_footer">
                 <ul class="foot">
                     <li><a href="http://" target="_blank" rel="noopener noreferrer">&copy; Copyright</a></li>
@@ -38,6 +42,6 @@
                     <li><a href="http://" target="_blank" rel="noopener noreferrer">Impressum</a></li>
                 </ul>
             </div>
-        </div>
+        </div> -->
     </body>
 </html>

@@ -1,0 +1,11 @@
+{% extends 'navigation.html' %}
+{% load static %}
+{% block css %}<link rel="stylesheet" type="text/css" href="{% static 'css/soundboard.css' %}">{% endblock %}
+{% block content %} 
+    <div class="soundboard">
+        <label for="ChinaisAsshoe">China is Asshoe!</label>
+        <p><audio id="ChinaisAsshoe" src="{% static 'mp3/China Is Asshole.mp3' %}" controls></audio></p>
+        <label for="Egal">Egal!</label>
+        <P><audio id="Egal" src="{% static 'mp3/Michael Wendler - Egal.mp3' %}" controls></audio></P>
+    </div>
+{% endblock %}

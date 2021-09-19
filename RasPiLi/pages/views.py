@@ -4,3 +4,9 @@ from django.shortcuts import render
 
 def navigation_view(request):
     return render(request, 'navigation.html',{})
+
+def index_view(request):
+    return render(request, 'index.html',{})
+
+def soundboard_view(request):
+    return render(request, 'soundboard.html',{})
